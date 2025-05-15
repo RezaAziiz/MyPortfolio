@@ -5,10 +5,7 @@ const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div style={{ position: 'relative', minHeight: '100vh', backgroundColor: '#09122C' }}>
-      {/* Hamburger */}
-      
-
+    <div style={{ position: 'relative', minHeight: '100vh' }}>
 
       {children}
 

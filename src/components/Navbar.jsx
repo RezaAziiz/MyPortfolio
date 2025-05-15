@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../assets/logo.png'; // Ganti dengan path logo Anda
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -30,18 +31,18 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${showNavbar ? 'visible' : 'hidden'}`}>
       <div className="nav-content">
-        <h1 className="logo">MySite</h1>
+        <img src={logo} alt="Logo" />
         <div className="hamburger" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a  className="underline-animate" href="#about">About </a></li>
+          <li><a  className="underline-animate"href="#projects">Projects</a></li>
+          <li><a  className="underline-animate"href="#contact">Contact</a></li>
           <li>
                 <a
-                href="/resume.pdf"
-                download="My_Resume.pdf"
+                href="/RezaMaulanaAziiz_CV.pdf"
+                download="RezaMaulanaAziiz_CV.pdf"
                 className="resume-button"
                 >
                 Resume
